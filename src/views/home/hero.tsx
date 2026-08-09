@@ -13,6 +13,7 @@ export default function Hero() {
             src={heroLeft}
             alt=""
             priority
+            fetchPriority="high"
             sizes="(min-width: 768px) 394px, 48vw"
             className="h-auto w-[48.05%] self-start md:w-98.5"
           />
@@ -20,6 +21,7 @@ export default function Hero() {
             src={heroRight}
             alt=""
             priority
+            fetchPriority="high"
             sizes="(min-width: 768px) 394px, 48vw"
             className="h-auto w-[48.05%] self-start md:w-98.5 xl:self-end"
           />
@@ -28,8 +30,7 @@ export default function Hero() {
         <div className="v-container mt-12 md:mt-18 xl:absolute xl:inset-0 xl:mt-0 xl:flex xl:flex-col xl:justify-center">
           <div className="mx-auto flex max-w-md flex-col items-center text-center">
             <h1 className="text-display-sm font-black text-very-dark-navy md:text-display-md xl:text-display">
-              Group Chat
-              <br />
+              Group Chat <br />
               for Everyone
             </h1>
 
