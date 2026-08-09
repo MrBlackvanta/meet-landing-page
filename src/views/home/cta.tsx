@@ -1,4 +1,5 @@
 import CtaButton from "@/components/cta-button";
+import { Footer } from "@/components/layout";
 import StepBadge from "@/components/step-badge";
 
 export default function Cta() {
@@ -6,9 +7,9 @@ export default function Cta() {
     <section id="download">
       <StepBadge className="relative z-10">02</StepBadge>
 
-      <div className="-mt-7 v-cta-band py-16 xl:py-28">
+      <div className="v-cta-band -mt-7 pt-16 pb-2 xl:pt-28">
         <div className="v-container">
-          <div className="mx-auto flex max-w-126 flex-col items-center text-center xl:grid xl:max-w-none xl:grid-cols-12 xl:items-start xl:gap-8 xl:text-left">
+          <div className="mx-auto flex max-w-126 v-reveal flex-col items-center text-center xl:grid xl:max-w-none xl:grid-cols-12 xl:items-start xl:gap-8 xl:text-left">
             <h2 className="text-heading-sm font-black text-off-white md:text-heading-md xl:col-span-5 xl:text-heading">
               Experience more together
             </h2>
@@ -28,6 +29,8 @@ export default function Cta() {
             </CtaButton>
           </div>
         </div>
+
+        <Footer />
       </div>
     </section>
   );

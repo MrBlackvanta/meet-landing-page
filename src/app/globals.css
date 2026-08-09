@@ -45,9 +45,6 @@
 }
 
 @layer base {
-  html {
-    scrollbar-gutter: stable;
-  }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
@@ -88,25 +85,69 @@
 @utility v-cta-band {
   --band-tint: color-mix(in srgb, var(--color-cyan) 90%, transparent);
   --focus-ring: var(--color-off-white);
-  background-image:
-    linear-gradient(var(--band-tint), var(--band-tint)),
-    url("/footer-mobile.webp");
-  background-position: center;
-  background-size: cover;
+  @apply relative overflow-clip;
 
-  @media (width >= 40rem) {
+  &::before {
+    @apply absolute inset-x-0 top-[-15%] bottom-[-15%] -z-10 content-[''];
     background-image:
       linear-gradient(var(--band-tint), var(--band-tint)),
-      url("/footer-tablet.webp");
+      url("/footer-mobile.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (width >= 40rem) {
+    &::before {
+      background-image:
+        linear-gradient(var(--band-tint), var(--band-tint)),
+        url("/footer-tablet.webp");
+    }
   }
 
   @media (width >= 64rem) {
-    background-image:
-      linear-gradient(var(--band-tint), var(--band-tint)),
-      url("/footer-desktop.webp");
+    &::before {
+      background-image:
+        linear-gradient(var(--band-tint), var(--band-tint)),
+        url("/footer-desktop.webp");
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      &::before {
+        animation: v-parallax linear both;
+        animation-timeline: view();
+        animation-range: cover 0% cover 100%;
+      }
+    }
   }
 }
 
 @utility v-footer-link {
-  @apply text-cyan underline underline-offset-2 transition-colors hover:text-very-dark-navy motion-reduce:transition-none;
+  @apply text-off-white underline underline-offset-2 transition-colors hover:decoration-light-cyan motion-reduce:transition-none;
+}
+
+@keyframes v-parallax {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+
+@keyframes v-reveal {
+  from {
+    transform: translateY(1.5rem);
+  }
+}
+
+@utility v-reveal {
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      animation: v-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 80%;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Footer, Header } from "@/components/layout";
+import { Header } from "@/components/layout";
 import { Cta, Features, Hero } from "@/views/home";
 
 export default function Home() {
@@ -11,8 +11,6 @@ export default function Home() {
         <Features />
         <Cta />
       </main>
-
-      <Footer />
     </>
   );
 }

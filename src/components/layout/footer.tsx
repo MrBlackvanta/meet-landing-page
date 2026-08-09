@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="v-container pt-4 pb-0.5 text-center text-sm">
+    <footer className="v-container mt-16 text-center text-sm text-off-white xl:mt-28">
       Challenge by{" "}
       <a
         href="https://www.frontendmentor.io?ref=challenge"

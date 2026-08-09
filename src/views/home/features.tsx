@@ -28,7 +28,7 @@ export default function Features() {
       <StepBadge>01</StepBadge>
 
       <div className="v-container">
-        <ul className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6 xl:gap-8">
+        <ul className="mt-16 grid v-reveal grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6 xl:gap-8">
           {gallery.map(({ image, alt }) => (
             <li
               key={image.src}
@@ -44,7 +44,7 @@ export default function Features() {
           ))}
         </ul>
 
-        <div className="mt-16 flex flex-col items-center text-center">
+        <div className="mt-16 flex v-reveal flex-col items-center text-center">
           <p className="-me-1 text-overline-sm font-black tracking-overline text-cyan uppercase md:text-overline-md xl:text-overline">
             Built for modern use
           </p>
