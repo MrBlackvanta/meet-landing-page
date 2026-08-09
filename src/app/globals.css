@@ -85,10 +85,10 @@
 @utility v-cta-band {
   --band-tint: color-mix(in srgb, var(--color-cyan) 90%, transparent);
   --focus-ring: var(--color-off-white);
-  @apply relative overflow-clip;
+  @apply relative isolate overflow-clip;
 
   &::before {
-    @apply absolute inset-x-0 top-[-15%] bottom-[-15%] -z-10 content-[''];
+    @apply absolute inset-x-0 top-[-8%] bottom-[-8%] -z-10 content-[''];
     background-image:
       linear-gradient(var(--band-tint), var(--band-tint)),
       url("/footer-mobile.webp");
@@ -129,10 +129,10 @@
 
 @keyframes v-parallax {
   from {
-    transform: translateY(-10%);
+    transform: translateY(-6%);
   }
   to {
-    transform: translateY(10%);
+    transform: translateY(6%);
   }
 }
 
