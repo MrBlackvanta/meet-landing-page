@@ -69,6 +69,20 @@
 }
 
 @utility v-container {
-  @apply mx-auto w-full;
-  max-width: var(--container-page);
+  @apply mx-auto w-full px-8 md:px-11;
+  max-width: calc(var(--container-page) + 5.5rem);
+}
+
+@utility v-btn {
+  @apply inline-flex h-14 items-center gap-1 rounded-full px-10 text-base font-black transition-colors motion-reduce:transition-none;
+}
+
+@utility v-btn-cyan {
+  --btn-version: var(--color-light-cyan);
+  @apply bg-cyan text-off-white hover:bg-cyan-hover;
+}
+
+@utility v-btn-purple {
+  --btn-version: var(--color-light-purple);
+  @apply bg-purple text-off-white hover:bg-purple-hover;
 }

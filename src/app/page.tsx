@@ -1,14 +1,13 @@
-import { LogoIcon } from "@/components/icons";
+import { Header } from "@/components/layout";
+import { Hero } from "@/views/home";
 
 export default function Home() {
   return (
     <>
-      <header>
-        <LogoIcon role="img" aria-label="Meet" />
-      </header>
+      <Header />
 
       <main className="flex-1">
-        <h1>Group Chat for Everyone</h1>
+        <Hero />
       </main>
     </>
   );
