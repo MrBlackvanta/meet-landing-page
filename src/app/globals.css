@@ -58,19 +58,12 @@
   }
   a,
   button {
-    @apply v-focus-ring;
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2;
+    outline-color: var(--focus-ring, var(--color-very-dark-navy));
   }
   button:not(:disabled) {
     @apply cursor-pointer;
   }
-}
-
-@utility v-focus-ring {
-  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-very-dark-navy;
-}
-
-@utility v-focus-ring-inverse {
-  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-off-white;
 }
 
 @utility v-container {
@@ -90,4 +83,30 @@
 @utility v-btn-purple {
   --btn-version: var(--color-light-purple);
   @apply bg-purple text-off-white hover:bg-purple-hover;
+}
+
+@utility v-cta-band {
+  --band-tint: color-mix(in srgb, var(--color-cyan) 90%, transparent);
+  --focus-ring: var(--color-off-white);
+  background-image:
+    linear-gradient(var(--band-tint), var(--band-tint)),
+    url("/footer-mobile.webp");
+  background-position: center;
+  background-size: cover;
+
+  @media (width >= 40rem) {
+    background-image:
+      linear-gradient(var(--band-tint), var(--band-tint)),
+      url("/footer-tablet.webp");
+  }
+
+  @media (width >= 64rem) {
+    background-image:
+      linear-gradient(var(--band-tint), var(--band-tint)),
+      url("/footer-desktop.webp");
+  }
+}
+
+@utility v-footer-link {
+  @apply text-cyan underline underline-offset-2 transition-colors hover:text-very-dark-navy motion-reduce:transition-none;
 }
