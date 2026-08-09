@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyan: #3f7c8b;
+  --color-cyan-hover: #71c0d4;
+  --color-purple: #855fb1;
+  --color-purple-hover: #b18bdd;
+  --color-very-dark-navy: #28283d;
+  --color-grey: #71718b;
+  --color-light-grey: #d1d1df;
+  --color-off-white: #fafafa;
+
+  --container-page: 70rem;
+
+  --text-display: 4rem;
+  --text-display--line-height: 1.1;
+  --text-display-md: 3rem;
+  --text-display-md--line-height: 1.1;
+  --text-display-sm: 2.5rem;
+  --text-display-sm--line-height: 1.1;
+
+  --text-heading: 2.5rem;
+  --text-heading--line-height: 1.1;
+  --text-heading-md: 2.25rem;
+  --text-heading-md--line-height: 1.1;
+  --text-heading-sm: 2rem;
+  --text-heading-sm--line-height: 1.1;
+
+  --text-overline: 1rem;
+  --text-overline--line-height: 1.1;
+  --text-overline-md: 0.875rem;
+  --text-overline-md--line-height: 1.1;
+  --text-overline-sm: 0.75rem;
+  --text-overline-sm--line-height: 1.1;
+
+  --text-body: 1.125rem;
+
+  --tracking-overline: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-red-hat-display);
+}
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply bg-off-white text-base text-grey;
+  }
+  a,
+  button {
+    @apply v-focus-ring;
+  }
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@utility v-focus-ring {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-very-dark-navy;
+}
+
+@utility v-focus-ring-inverse {
+  @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-off-white;
+}
+
+@utility v-container {
+  @apply mx-auto w-full;
+  max-width: var(--container-page);
+}
