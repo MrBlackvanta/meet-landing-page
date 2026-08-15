@@ -12,7 +12,7 @@ const redHatDisplay = Red_Hat_Display({
 const title = "Meet landing page";
 const description =
   "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device — a Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://vanta-meet-landing-page.netlify.app";
+const siteUrl = "https://meet-landing-page.abdelrhman-ahmed8881.workers.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

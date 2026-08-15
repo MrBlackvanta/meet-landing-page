@@ -21,7 +21,8 @@ This is a solution to the [Meet landing page challenge on Frontend Mentor](https
 ### Links
 
 - Solution URL: [GitHub](https://github.com/MrBlackvanta/meet-landing-page)
-- Live Site URL: [Netlify](https://vanta-meet-landing-page.netlify.app)
+- Live Site URL: [Cloudflare](https://meet-landing-page.abdelrhman-ahmed8881.workers.dev)
+- Mirror: [Netlify](https://vanta-meet-landing-page.netlify.app)
 
 ## My process
 
