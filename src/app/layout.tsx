@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Red_Hat_Display } from "next/font/google";
+import { siteUrl } from "@/app/site";
 import "./globals.css";
 
 const redHatDisplay = Red_Hat_Display({
@@ -11,9 +12,7 @@ const redHatDisplay = Red_Hat_Display({
 
 const title = "Meet landing page";
 const description =
-  "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device — a Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://meet-landing-page.abdelrhman-ahmed8881.workers.dev";
-
+  "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
