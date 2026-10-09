@@ -10,9 +10,18 @@ const redHatDisplay = Red_Hat_Display({
   display: "swap",
 });
 
-const title = "Meet landing page";
+const name = "Meet";
+const title = `${name} | Group chat for everyone`;
 const description =
   "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.";
+
+const shareImage = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: `The ${name} name under the line Built for modern use, on the brand's dark cyan, beside a photograph of someone on a video call at a laptop.`,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
@@ -22,14 +31,16 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: title,
+    siteName: name,
     locale: "en_US",
     type: "website",
+    images: [shareImage],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [shareImage],
   },
 };
 
